@@ -7,15 +7,15 @@ app.listen(3000)
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.sendFile('./views/index.html', { root: __dirname })
+    res.render('index')
 })
 
 app.get('/contact-me', (req, res) => {
-    res.sendFile('./views/contact-me.html', { root: __dirname })
+    res.render('contact-me')
 })
 
 app.get('/about', (req, res) => {
-    res.sendFile('./views/about.html', { root: __dirname })
+    res.render('about')
 })
 
 
@@ -25,5 +25,5 @@ app.get('/about-us', (req, res) => {
 
 
 app.use((req, res) => {
-    res.sendStatus(404).sendFile('./views/404.html', { root: __dirname })
+    res.status(404).render('404')
 })
