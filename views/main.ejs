@@ -10,9 +10,9 @@
     <% const animals = ['Cow', 'Horse', 'Chicken', 'Dog'] %>
 
     <ul>
-        <li><%= animals.map((animal) => {
-
-      <% }) %></li>
+        <% animals.map((animal) => { %>
+            <li><%= animal %>s are cute</li>
+      <% }) %>
     </ul>
 </body>
 </html>
